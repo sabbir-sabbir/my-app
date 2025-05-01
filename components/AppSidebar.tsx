@@ -48,7 +48,7 @@ const AppSidebar = () => {
         <SidebarMenuSubItem>
             <SidebarMenuButton asChild>
              <Link href="/">
-             <Image src="/logo.svg" alt="Logo" width={30} height={30} />
+             <Image src="https://images.unsplash.com/photo-1560456001-bac27801a851?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRyYWdvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Logo" width={30} height={30} />
              <span>SABBIR </span>
              </Link>
             </SidebarMenuButton>

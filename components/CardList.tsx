@@ -30,7 +30,7 @@ const popularContent = [
       id: 4,
       title: "Mystical Forest",
       badge: "Subscription",
-      image: "https://images.unsplash.com/photo-1605460375648-278bcbd579a6",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
       count: 175
     },
     {
@@ -62,7 +62,7 @@ const latestTransactions = [
       id: 3,
       title: "Robot Portrait",
       badge: "Exclusive",
-      image: "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
       count: 1
     },
     {
@@ -93,8 +93,8 @@ const CardList = ({title}:{title:string}) => {
 
             {/* map */}
   {List.map((item) => (
-    <Card key={item.id} className='flex items-center gap-2 p-2'>
-      <div className='w-8 h-8 rounded-full relative overflow-hidden'>
+    <Card key={item.id} className='flex flex-row items-center gap-2 py-2 px-2'>
+      <div className='w-6 h-6 rounded-full relative overflow-hidden'>
         <Image src={item.image} alt={item.title} fill className='object-cover' />
       </div>
 
