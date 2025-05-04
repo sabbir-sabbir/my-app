@@ -33,30 +33,55 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import AppLineChart from "@/components/AppLineChart";
 
 
-
-
+import { Metadata } from "next";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { Slash } from "lucide-react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import {
+  BadgeCheck,
+  Citrus,
+  Apple,
+  Candy,
+  Grab,
+  IceCream,
+} from "lucide-react";
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
+import EditUser from "@/components/EditUser"; // adjust the import path if needed
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import CardList from "@/components/CardList";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import AppLineChart from "@/components/AppLineChart";
 
 export const metadata: Metadata = {
   title: "User Profile",
 };
 
-export default function SingleUserPage({ params }: { params: { username: string } }) {
- 
-  const username = params?.username ?? ""; 
+interface PageProps {
+  params: {
+    username: string;
+  };
+}
 
-  
+export default function SingleUserPage({ params }: PageProps) {
+  const username = params?.username ?? "";
+
   const displayName = username
-    .replace(/-/g, " ") 
-    .replace(/\b\w/g, (c) => c.toUpperCase()); 
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 
- 
   if (!username) {
     return <div>Error: Username not found</div>;
   }
 
-
   return (
-    <>
     <div>
       <Breadcrumb>
         <BreadcrumbList>
@@ -69,14 +94,12 @@ export default function SingleUserPage({ params }: { params: { username: string 
           <BreadcrumbItem>
             <BreadcrumbLink href="/users">Users</BreadcrumbLink>
           </BreadcrumbItem>
-         
           <BreadcrumbSeparator>
             <Slash />
           </BreadcrumbSeparator>
           <BreadcrumbItem>
             <BreadcrumbLink href="/payments">Payments</BreadcrumbLink>
           </BreadcrumbItem>
-
           <BreadcrumbSeparator>
             <Slash />
           </BreadcrumbSeparator>
@@ -87,6 +110,7 @@ export default function SingleUserPage({ params }: { params: { username: string 
       </Breadcrumb>
 
       <div className="mt-2 flex flex-col md:flex-row gap-4">
+        {/* Left Panel */}
         <div className="w-full md:w-1/3 space-y-3">
           <div className="bg-primary-foreground p-4 rounded-md">
             <h1 className="font-sm tracking-wide">User Badges</h1>
@@ -137,6 +161,7 @@ export default function SingleUserPage({ params }: { params: { username: string 
           </div>
         </div>
 
+        {/* Right Panel */}
         <div className="w-full md:w-2/3 space-y-3">
           <div className="bg-primary-foreground p-4 rounded-md space-y-2">
             <div className="flex items-center gap-4">
@@ -159,6 +184,5 @@ export default function SingleUserPage({ params }: { params: { username: string 
         </div>
       </div>
     </div>
-    </>
   );
 }
