@@ -56,6 +56,7 @@ export default function SingleUserPage({ params }: { params: { username: string 
 
 
   return (
+    <>
     <div>
       <Breadcrumb>
         <BreadcrumbList>
@@ -68,6 +69,14 @@ export default function SingleUserPage({ params }: { params: { username: string 
           <BreadcrumbItem>
             <BreadcrumbLink href="/users">Users</BreadcrumbLink>
           </BreadcrumbItem>
+         
+          <BreadcrumbSeparator>
+            <Slash />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/payments">Payments</BreadcrumbLink>
+          </BreadcrumbItem>
+
           <BreadcrumbSeparator>
             <Slash />
           </BreadcrumbSeparator>
@@ -150,5 +159,6 @@ export default function SingleUserPage({ params }: { params: { username: string 
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -9,6 +9,21 @@ const dummyUsers = [
   { name: "Jhon Doe", username: "jhon-doe", email: "jhon@example.com", role: "Admin" },
   { name: "Jane Smith", username: "jane-smith", email: "jane@example.com", role: "Editor" },
   { name: "Mike Ross", username: "mike-ross", email: "mike@example.com", role: "User" },
+  { name: "Jhon Doe", username: "jhon-doe", email: "jhon@example.com", role: "Admin" },
+  { name: "Jane Smith", username: "jane-smith", email: "jane@example.com", role: "Editor" },
+  { name: "Mike Ross", username: "mike-ross", email: "mike@example.com", role: "User" },
+  { name: "Jhon Doe", username: "jhon-doe", email: "jhon@example.com", role: "Admin" },
+  { name: "Jane Smith", username: "jane-smith", email: "jane@example.com", role: "Editor" },
+  { name: "Mike Ross", username: "mike-ross", email: "mike@example.com", role: "User" },
+  { name: "Jhon Doe", username: "jhon-doe", email: "jhon@example.com", role: "Admin" },
+  { name: "Jane Smith", username: "jane-smith", email: "jane@example.com", role: "Editor" },
+  { name: "Mike Ross", username: "mike-ross", email: "mike@example.com", role: "User" },
+  { name: "Jhon Doe", username: "jhon-doe", email: "jhon@example.com", role: "Admin" },
+  { name: "Jane Smith", username: "jane-smith", email: "jane@example.com", role: "Editor" },
+  { name: "Mike Ross", username: "mike-ross", email: "mike@example.com", role: "User" },
+  { name: "Jhon Doe", username: "jhon-doe", email: "jhon@example.com", role: "Admin" },
+  { name: "Jane Smith", username: "jane-smith", email: "jane@example.com", role: "Editor" },
+  { name: "Mike Ross", username: "mike-ross", email: "mike@example.com", role: "User" },
 ];
 
 // UsersPage Component
@@ -29,8 +44,8 @@ export default function UsersPage() {
         </TableHeader>
         
         <TableBody>
-          {dummyUsers.map((user) => (
-            <TableRow key={user.username}>
+          {dummyUsers.map((user, index) => (
+            <TableRow key={index}>
               <TableCell>{user.name}</TableCell>
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.role}</TableCell>

@@ -30,7 +30,7 @@ const AppAreaChart = () => {
   return (
     <div>
         <h1 className='text-xl mb-3 tracking-wide'>Total Visitors</h1>
-        <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+        <ChartContainer config={chartConfig} className="h-[400px] w-full">
       <AreaChart accessibilityLayer data={chartData}>
       <CartesianGrid vertical={false} />
       <XAxis

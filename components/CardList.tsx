@@ -21,7 +21,7 @@ const popularContent = [
     },
     {
       id: 3,
-      title: "Futuristic Portrait",
+      title: "Futuristic ",
       badge: "Claimed",
       image: "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
       count: 340
@@ -36,6 +36,13 @@ const popularContent = [
     {
       id: 5,
       title: "Space Explorer",
+      badge: "Claimed",
+      image: "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
+      count: 290
+    },
+    {
+      id: 6,
+      title: "Abstract Wild",
       badge: "Claimed",
       image: "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
       count: 290
@@ -87,30 +94,27 @@ const CardList = ({title}:{title:string}) => {
 
     const List = title === "Popular Content" ? popularContent : latestTransactions;
   return (
-    <div className=''>
-        <h1 className='text-xl font-medium mb-6'>{title}</h1>
-        <div className='flex flex-col gap-2 px-1'>
+   <>
+   <div className='w-full flex flex-col items-start justify-start'>
+    <h1 className='text-xl mb-3 tracking-wide'>{title}</h1>
+    <div className='flex flex-col gap-2 '>
+      {
+        List.map((item)=> (
+          <div className='flex items-center justify-between gap-4' key={item.title}>
+         <Image src={item.image} alt={item.badge} width={30} height={30} className='rounded-full object-cover'  />
+         <div className='flex flex-col items-center justify-start '>
+         <p className='text-[14px] tracking-wide'>{item.title}</p>
+         <p className='bg-golden-pink text-[12px] text-gradient-end px-1 py-0 rounded-full'>{item.badge}</p>
+         </div>
+        
+         <p className='font-bold tracking-wide '>{(item.count / 1000).toFixed(1)}k</p>
 
-            {/* map */}
-  {List.map((item) => (
-    <Card key={item.id} className='flex flex-row items-center gap-2 py-2 px-2'>
-      <div className='w-6 h-6 rounded-full relative overflow-hidden'>
-        <Image src={item.image} alt={item.title} fill className='object-cover' />
-      </div>
-
-      <div className="flex flex-1 flex-col justify-center gap-1">
-        <CardTitle className='text-[12px] font-light ' >{item.title}</CardTitle>
-        <Badge variant="secondary">{item.badge}</Badge>
-      </div>
-
-      <CardFooter className="text-sm font-semibold ">
-        {item.count / 1000}k
-      </CardFooter>
-    </Card>
-  ))}
-</div>
-
+          </div>
+        ))
+      }
     </div>
+   </div>
+   </>
   )
 }
 

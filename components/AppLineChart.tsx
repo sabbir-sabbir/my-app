@@ -31,7 +31,7 @@ const chartData = [
 const AppLineChart = () => {
   return (
     <>
-    <ChartContainer config={chartConfig} className='mt-6'>
+    <ChartContainer config={chartConfig} className='  mt-6'>
     <LineChart
             accessibilityLayer
             data={chartData}
