@@ -1,6 +1,3 @@
-import { type Metadata } from "next";
-import CardList from "@/components/CardList";
-import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,36 +10,12 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { Progress } from "@/components/ui/progress";
-import {
-  Apple,
-  BadgeCheck,
-  Candy,
-  Citrus,
-  Grab,
-  IceCream,
-  Slash,
-} from "lucide-react";
 import {
   Sheet,
   SheetTrigger
 } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import AppLineChart from "@/components/AppLineChart";
-
-
-import { Metadata } from "next";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Slash } from "lucide-react";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import {
   BadgeCheck,
   Citrus,
@@ -51,18 +24,11 @@ import {
   Grab,
   IceCream,
 } from "lucide-react";
-import { Sheet, SheetTrigger } from "@/components/ui/sheet";
-import EditUser from "@/components/EditUser"; // adjust the import path if needed
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import CardList from "@/components/CardList";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import AppLineChart from "@/components/AppLineChart";
-
-export const metadata: Metadata = {
-  title: "User Profile",
-};
 
 interface PageProps {
   params: {
