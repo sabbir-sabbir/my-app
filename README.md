@@ -61,7 +61,7 @@ Let's keep it real — this project was a **battle**.
 ## 📂 How to Run Locally
 
 ```bash
-git clone (clone this repo)
+git clone https://github.com/sabbir-sabbir/my-app.git
 cd my-app
 npm install
 npm run dev
